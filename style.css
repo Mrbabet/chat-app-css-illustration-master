@@ -1,0 +1,564 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+:root {
+  /* ####Text */
+  /* (sub-heading at the top of the app UI) */
+  --font-color-Pale-Violet: hsl(276, 100%, 81%);
+  /* (chat on the left) */
+  --font-color-Moderate-Violet: hsl(276, 55%, 52%);
+  /* (chat on the right) */
+  --font-color-Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  /* (placeholder text) */
+  --font-color-Grayish-Blue: hsl(206, 6%, 79%);
+  /* (main heading) */
+  --font-color-Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  /* (paragraph) */
+  -font-color-dark-grayish-violet: hsl(270, 7%, 64%);
+
+  /* #### Gradients */
+
+  /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+
+  --fcolor-gradient-1-Light-Magenta: hsl(293, 100%, 63%);
+  --fcolor-gradient-2-Light-Violet: hsl(264, 100%, 61%);
+
+  /* ### Secondary */
+
+  --font-color-White: hsl(0, 0%, 100%);
+  /* (app background) */
+  --font-color-Light-Grayish-Violet: hsl(270, 20%, 96%);
+  /* (submit button background) */
+  --font-color-Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  /* (radio button outline) */
+  --font-color-Very-Light-Magenta: hsl(289, 100%, 72%);
+
+  --font-family: "Rubik", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: initial;
+  }
+}
+body {
+  font-family: var(--font-family);
+  background-color: #f2f2f2;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.background-style-1 {
+  background: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+
+  height: 1018px;
+  width: 510px;
+  border-radius: 0px 0px 99vh 99vh;
+  position: absolute;
+  z-index: -10;
+  top: -55%;
+  left: -50%;
+}
+.background-style-2 {
+  background: linear-gradient(
+    to left,
+    hsla(293, 100%, 63%, 0.1),
+    hsla(264, 100%, 61%, 0.1)
+  );
+  height: 1018px;
+  width: 510px;
+  border-radius: 99vh 99vh 0px 0px;
+  position: absolute;
+  z-index: -10;
+  bottom: -55%;
+  right: -50%;
+}
+.description {
+  margin: 2rem;
+}
+.description h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #3e2753;
+  font-weight: 500;
+  margin: 4rem auto 1.5rem auto;
+}
+.description p {
+  font-size: 16px;
+  line-height: 35px;
+  text-align: center;
+  color: #a39da9;
+  max-width: 313px;
+  margin: 0 auto;
+}
+
+/* Mobile */
+.phone-container {
+  margin: 4rem 4rem 0 4rem;
+  background-color: white;
+  border-radius: 30px;
+  width: 247px;
+  margin: 1rem auto;
+  height: 515px;
+}
+.phone {
+  padding: 0.575rem;
+  position: relative;
+  margin: 0 auto;
+}
+.top-bar {
+  background: linear-gradient(
+    to left,
+    hsla(293, 100%, 63%),
+    hsla(264, 100%, 61%)
+  );
+  color: white;
+  padding: 0.675rem;
+  border-radius: 30px 30px 0 0;
+  position: relative;
+}
+.top-bar::after {
+  position: absolute;
+  content: "";
+  width: 130px;
+  height: 20px;
+  background-color: white;
+  top: 0;
+  left: 0;
+  transform: translate(40%, 0%);
+  border-radius: 0 0 15px 15px;
+}
+.top-bar__content {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+/* .top-bar__arrow {
+  background-color: white;
+  position: absolute;
+  left: 8%;
+  bottom: 45%;
+}
+.top-bar__arrow::after {
+  content: "";
+  width: 2px;
+  height: 12px;
+  background-color: white;
+  position: absolute;
+
+  transform: rotate(45deg);
+  border-radius: 10px;
+}
+.top-bar__arrow::before {
+  content: "";
+  width: 2px;
+  height: 12px;
+  background-color: white;
+  position: absolute;
+  border-radius: 10px;
+  transform: rotate(-45deg);
+} */
+.top-bar__dots {
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 100%;
+  bottom: 32%;
+  position: absolute;
+  left: 90%;
+}
+.top-bar__dots::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -200%;
+}
+.top-bar__dots::after {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+
+  bottom: 200%;
+}
+
+.avatar {
+  background-image: url(/images/avatar.jpg);
+  height: 24px;
+  width: 24px;
+  background-size: cover;
+  border-radius: 50%;
+  outline: 2px solid white;
+}
+
+.name {
+  font-size: 11px;
+  line-height: auto;
+  font-weight: 500;
+}
+.status {
+  font-size: 8px;
+  font-weight: 400;
+  color: #d99eff;
+}
+.flex-box-name-status-placement {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+.middle-section {
+  background-color: #f5f3f7;
+  padding: 0.25rem;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+img {
+  width: 40px;
+  height: 40px;
+  margin-inline: 0.3rem;
+  border-radius: 10px;
+}
+.chat-img {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.chat-box {
+  width: 128px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #eee5f4;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: #9341c8;
+  font-size: 8px;
+}
+.chat-box:nth-of-type(4) {
+  margin-left: auto;
+  background-color: white;
+  color: #6e5d7e;
+}
+.chat-box:nth-of-type(5) {
+  margin-left: auto;
+  background-color: white;
+  color: #6e5d7e;
+  width: 80px;
+  margin-bottom: 1rem;
+}
+.price {
+  width: 160px;
+  height: 32px;
+  background: linear-gradient(
+    to left,
+    hsla(293, 100%, 63%),
+    hsla(264, 100%, 61%)
+  );
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin-left: 0.25rem;
+  position: relative;
+}
+.price:nth-last-of-type(2) {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.button-text {
+  font-size: 8px;
+  margin-left: 1rem;
+}
+.button-price {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: auto;
+}
+.radio {
+  display: inline-flex;
+}
+.input__radio {
+  display: none;
+}
+.input-radio-price {
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #e472ff;
+  border-radius: 50%;
+  padding: 2px;
+}
+.input-radio-price:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: hsla(293, 100%, 63%);
+  border-radius: 50%;
+
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+.input__radio:checked + .input-radio-price:after {
+  transform: scale(1);
+}
+.message-box {
+  display: flex;
+  background-color: white;
+  padding-block: 3px;
+  margin-block: 0.5rem;
+  border-radius: 99vh;
+  margin-inline: 0.25rem;
+  overflow: hidden;
+}
+.message-box input:nth-of-type(1) {
+  border: none;
+  width: 80%;
+  font-size: 9px;
+  margin-left: 0.5rem;
+}
+.message-box input:focus {
+  outline: none;
+}
+.message-box__button_submit {
+  border-radius: 50%;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: #3e2753;
+  color: white;
+  cursor: pointer;
+}
+input-radio-price button {
+  cursor: pointer;
+}
+
+.top-bar__arrow {
+  height: 10px;
+  width: 10px;
+  border: 2px solid white;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  transform: translate(-50%, -100%) rotate(135deg);
+  border-top: transparent;
+  border-left: transparent;
+}
+
+@media screen and (min-width: 830px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100;
+  }
+  .background-style-1 {
+    background: linear-gradient(
+      to left,
+      hsl(293, 100%, 63%),
+      hsl(264, 100%, 61%)
+    );
+
+    height: 1018px;
+    width: 500px;
+    border-radius: 0px 0px 99vh 99vh;
+    position: absolute;
+    z-index: -10;
+    top: -100%;
+    left: -20%;
+  }
+  .background-style-2 {
+    background: linear-gradient(
+      to left,
+      hsla(293, 100%, 63%, 0.1),
+      hsla(264, 100%, 61%, 0.1)
+    );
+    height: 1018px;
+    width: 510px;
+    border-radius: 99vh 99vh 0px 0px;
+    position: absolute;
+    z-index: -10;
+    bottom: -100%;
+    right: -20%;
+  }
+  .phone-container {
+    margin: 0;
+    width: 247px;
+  }
+  .description {
+    margin-left: 8rem;
+  }
+  .description h1 {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+  .description p {
+    text-align: left;
+    margin: 0;
+    max-width: 500px;
+  }
+  .prevent-mobile-squishing {
+    margin: auto 2rem;
+  }
+}
