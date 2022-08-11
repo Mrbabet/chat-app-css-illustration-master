@@ -524,8 +524,8 @@ input-radio-price button {
     border-radius: 0px 0px 99vh 99vh;
     position: absolute;
     z-index: -10;
-    top: -100%;
-    left: -20%;
+    top: -50%;
+    left: 0%;
   }
   .background-style-2 {
     background: linear-gradient(
@@ -538,8 +538,8 @@ input-radio-price button {
     border-radius: 99vh 99vh 0px 0px;
     position: absolute;
     z-index: -10;
-    bottom: -100%;
-    right: -20%;
+    bottom: -50%;
+    right: 0%;
   }
   .phone-container {
     margin: 0;
